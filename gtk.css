@@ -2781,6 +2781,9 @@ headerbar separator.titlebutton  {background: transparent;}
 .nautilus-window box viewport list {border-radius: 0px 0px 0px 11px;}
 
 .nautilus-window .sidebar-icon {color: black;}
+.nautilus-window .path-bar-box {padding: 0px 112px}
+.nautilus-window infobar{background: white}
+
 
 /**************xfce4-panel*****************/
 .xfce4-panel menubar label, .xfce4-panel widget button label { color: white; text-shadow: 1px 1px 3px rgba (0,0,0,0.8
