@@ -39,6 +39,20 @@ decoration {
   box-shadow: 0 3px 20px 1px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.23);
 }
 
+button.titlebutton {
+background: transparent;
+border: none;
+padding: 0px 10px 0px 0px
+} 
+
+.maximize.titlebutton image {color: transparent; background-image: url("assets/maximize-active.svg");
+}
+.minimize.titlebutton image {color: transparent; background-image: url("assets/minimize-active.svg");
+}
+.close.titlebutton image {color: transparent; background-image: url("assets/close-active.svg");
+}
+
+
 popover {
 background: alpha(#f7f7f8, 0.97); 
 border-radius: 12px; 
@@ -143,6 +157,14 @@ margin: 0px 15px
 button.combo arrow {background: #0168c1; padding-right: 20;
   }
 
+combobox arrow {
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+  margin: 2px;
+  min-height: 16px;
+  min-width: 16px; }
+combobox:drop(active) {
+  box-shadow: none; }
+
 /*****End Arrows*******/
 
 headerbar {
@@ -159,7 +181,7 @@ border: solid 1 #949494;
 border-radius: 0.2; 
 }
 
-
+filechooserbutton {margin-left: 10px;} 
 
 .raised {
 margin: 0px 15px;
@@ -177,9 +199,6 @@ padding: 1px 8px;
 box-shadow: 0 1 1px rgba(0, 0, 0, 0.3)
 }
 
-button.titlebutton {
-background: black;
-}
 
 /*****Nautilus****/
 .nautilus-window {
