@@ -1,3 +1,9 @@
+@define-color theme_bg_color #ededed
+@define-color theme_fg_color #d5d5d5
+@define-color theme_separator #d5d5d5
+@define-color theme_bg_selected #0168c1
+@define-color theme_base #f7f7f8
+
 * {
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;
@@ -22,25 +28,81 @@
  
 
  
-  .background
+  .background, .unified.background
    {
-background: rgba (247, 247, 248, 0.99); 
+background: alpha(#f7f7f8, 0.99); 
 color: black;
 }
 decoration {
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 5px 5px;
   border-width: 0px;
   box-shadow: 0 3px 20px 1px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.23);
 }
 
-  button {
+popover {
+background: alpha(#f7f7f8, 0.97); 
+border-radius: 12px; 
+box-shadow: 1 4 6 rgba(0, 0, 0, 0.2);
+}
+
+popover modelbutton {
+margin: 3px 0px;
+}box-shadow: 1 4 6 rgba(0, 0, 0, 0.2);
+}
+
+.background.popup {
+background: alpha(#ededed, 0.9);
+border-radius: 16px;
+}
+
+.background.popup decoration {
+border-radius: 16px;
+box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+list row {
+padding: 5px; 
+} 
+
+list row grid {
+padding: 0px 15px; 
+}
+
+list row:selected {
+background-image: linear-gradient(to right, alpha(#0168c1, 1) 15px, alpha(#e3e3e3, 0.2) 16px); padding: 0px 12px
+}
+
+scrolledwindow {
+background: white;
+border-top: solid 0.2px;
+}
+paned separator {
+background: transparent;
+border-left: 0.1 solid;
+}
+
+/****Button's****/
+
+button, {
   border-radius: 0.2px; 
-  border: 0.7 solid #393939; 
+  border: 0.3 solid #393939; 
   background: white; 
   color: black;
+  padding: 1px 8px;
   }
   
-  button.image-button 
+  .popup.toggle, button.toggle {
+  border: none; 
+  background: transparent;
+  }
+  
+  button.combo, button.font {
+  border-radius: 2px; 
+  min-height: 35px;
+border: 0.2 solid; 
+  }
+  
+button.image-button 
 {
 border: none;
 background: transparent;
@@ -50,13 +112,13 @@ button.text-button image
 color: #8c8c8c;
 }
 
-button.text-button 
+button.text-button, button.suggested-action
 {
 border: solid 1 #aaa;
 min-height: 25px;
 color: #2e2e2e;
 border-radius: 3px; 
-margin: 0px 5px;
+margin: 10px;
 font-weight: 600;
 }
 
@@ -71,12 +133,23 @@ button.text-button label
 margin: 0px 15px
 }
 
+.text-button.toggle {background: #fff; color: #000;}
+.text-button.toggle:last-child {border-left: none; border-radius: 0px 3px 3px 0px; margin-left: 0;}
+.text-button.toggle:first-child  {border-radius: 3px 0px 0px 3px; margin-right: 0;}
+
+/****END Button's****/
+
+/***** Arrows*******/
+button.combo arrow {background: #0168c1; padding-right: 20;
+  }
+
+/*****End Arrows*******/
 
 headerbar {
-background: rgba(237, 237, 237, 0.83); 
+background: rgba(237, 237, 237, 0.9); 
 border-radius: 5px 5px 0px 0px;
 min-height: 40px;
-border-bottom: solid 0.2;
+border-bottom: solid 0;
 }
 
 
@@ -90,16 +163,71 @@ border-radius: 0.2;
 
 .raised {
 margin: 0px 15px;
+
 }
+
 
 entry { 
 background: white;
-border-radius: 0.2;
-border: solid 1 #949494;
-min-height: 20px; 
+border-radius: 5px;
+border: solid 0.2 #949494;
+min-height: 25px; 
 color: black;
+padding: 1px 8px;
+box-shadow: 0 1 1px rgba(0, 0, 0, 0.3)
 }
 
 button.titlebutton {
 background: black;
+}
+
+/*****Nautilus****/
+.nautilus-window {
+background: transparent;
+border-radius: 5px;
+}
+
+.nautilus-window placessidebar {
+background: alpha(#d5d5d5, 0.95);
+padding: 10px;
+}
+
+.nautilus-window headerbar {
+background-color: transparent;
+background-image: linear-gradient(to right, alpha(#d5d5d5, 0.95) 188px, alpha(#ededed, 0.98) 189px);
+border-bottom: solid 0;
+}
+
+.nautilus-window headerbar box.horizontal:first-child {padding: 0px 130px
+}
+.nautilus-window headerbar box.horizontal:first-child  box {padding: 0px 0px;
+}
+
+.nautilus-window paned separator {
+margin: -2px; 
+background: #c3c3c3;
+border: none;
+}
+/*****AND Nautilus****/
+
+/*****gnome-tweak****/
+.tweak-titlebar-left {background: #d5d5d5;
+font-weight: 600;}
+.tweak-categories {background: #d5d5d5;}
+leaflet.titlebar.unfolded + leaflet.unfolded searchbar {background: #d5d5d5;}
+/*****END gnome-tweak****/
+
+
+scrolledwindow.display-scrolled, scrolledwindow.history-view {
+background: #ededed;
+border: none;
+}
+
+
+
+.number-button, .procent-button, .clear-button, .numeric-point-button, .operator-button, .function-button, .simple-suggested-action, .simple-undo-button {
+border-radius: 0px; 
+margin: -2px; 
+padding: 0px;
+border: solid 0.1px
 }
