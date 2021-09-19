@@ -55,25 +55,38 @@ button.text-button
 border: solid 1 #aaa;
 min-height: 25px;
 color: #2e2e2e;
-}
-button.text-button box
-{
+border-radius: 3px; 
 margin: 0px 5px;
+font-weight: 600;
 }
 
+button.text-button:checked 
+{
+background: #0168c1;
+color: white;
+}
+
+button.text-button label
+{
+margin: 0px 15px
+}
+
+
 headerbar {
-background: rgba(240, 240, 240, 0.98); 
+background: rgba(237, 237, 237, 0.83); 
 border-radius: 5px 5px 0px 0px;
 min-height: 40px;
-border-bottom: solid 0.2;}
+border-bottom: solid 0.2;
 }
 
 
 headerbar button {
 background: white; 
 border: solid 1 #949494; 
-border-radius: 0.2; margin: 0px 5px;
+border-radius: 0.2; 
 }
+
+
 
 .raised {
 margin: 0px 15px;
@@ -86,4 +99,7 @@ border: solid 1 #949494;
 min-height: 20px; 
 color: black;
 }
-button.titlebutton { background: black;
+
+button.titlebutton {
+background: black;
+}
