@@ -1,0 +1,89 @@
+* {
+  -GtkScrollbar-has-backward-stepper: false;
+  -GtkScrollbar-has-forward-stepper: false;
+  -GtkScrollbar-has-secondary-backward-stepper: false;
+  -GtkScrollbar-has-secondary-forward-stepper: false;
+  -GtkScrolledwindow-scrollbar-spacing: 0;
+  -GtkScrolledwindow-scrollbars-within-bevel: 1;
+  -GtkTextView-error-underline-color: #CC0000;
+  -GtkToolbutton-icon-spacing: 6;
+  -GtkToolItemGroup-expander-size: 11;
+  -GtkWidget-text-handle-width: 20;
+  -GtkWidget-text-handle-height: 20;
+  -GtkDialog-button-spacing: 4;
+  -GtkDialog-action-area-border: 0;
+  -GtkTreeview-expander-size: 8;
+  background-clip: padding-box;
+  outline-width: 1px;
+  outline-offset: -3px;
+  outline-style: dashed;
+  outline-color: shade(#FFFFFF, 0.74);
+  -gtk-outline-radius: 0; }
+ 
+
+ 
+  .background
+   {
+background: rgba (247, 247, 248, 0.99); 
+color: black;
+}
+decoration {
+  border-radius: 5px 5px 0 0;
+  border-width: 0px;
+  box-shadow: 0 3px 20px 1px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.23);
+}
+
+  button {
+  border-radius: 0.2px; 
+  border: 0.7 solid #393939; 
+  background: white; 
+  color: black;
+  }
+  
+  button.image-button 
+{
+border: none;
+background: transparent;
+}
+button.text-button image
+{
+color: #8c8c8c;
+}
+
+button.text-button 
+{
+border: solid 1 #aaa;
+min-height: 25px;
+color: #2e2e2e;
+}
+button.text-button box
+{
+margin: 0px 5px;
+}
+
+headerbar {
+background: rgba(240, 240, 240, 0.98); 
+border-radius: 5px 5px 0px 0px;
+min-height: 40px;
+border-bottom: solid 0.2;}
+}
+
+
+headerbar button {
+background: white; 
+border: solid 1 #949494; 
+border-radius: 0.2; margin: 0px 5px;
+}
+
+.raised {
+margin: 0px 15px;
+}
+
+entry { 
+background: white;
+border-radius: 0.2;
+border: solid 1 #949494;
+min-height: 20px; 
+color: black;
+}
+button.titlebutton { background: black;
