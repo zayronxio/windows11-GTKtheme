@@ -206,9 +206,28 @@ background: transparent;
 border-radius: 5px;
 }
 
+.nautilus-window .sidebar-row {
+padding: 0px 4px;
+min-height: 28px;
+}
+
+
+.nautilus-window .sidebar-row label {padding-left: 5px;
+}
+
+.nautilus-window .sidebar-row:selected label {padding-left: 8px;
+}
+
+.nautilus-window .sidebar-row:selected image {color: #fff;
+}
+
+.nautilus-window row:selected  {
+background-image: linear-gradient(to right, alpha(#0168c1, 1) 25px, alpha(#e3e3e3, 1) 25px);
+}
+
 .nautilus-window placessidebar {
 background: alpha(#d5d5d5, 0.95);
-padding: 10px;
+padding: 0px;
 }
 
 .nautilus-window headerbar {
